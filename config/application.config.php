@@ -2,15 +2,6 @@
 return array(
     'modules' => array(
         'Application',
-        'Midnight\Wysiwyg',
-        'ZfcAdmin',
-        'AssetManager',
-        'Midnight\AdminModule',
-        'DoctrineModule',
-        'DoctrineORMModule',
-        'Midnight\UserModule',
-        'ZfcRbac',
-        'Midnight\CmsModule',
     ),
     'module_listener_options' => array(
         'module_paths' => array(
