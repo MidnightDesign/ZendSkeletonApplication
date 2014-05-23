@@ -2,6 +2,15 @@
 return array(
     'modules' => array(
         'Application',
+        'Midnight\Wysiwyg',
+        'ZfcAdmin',
+        'AssetManager',
+        'Midnight\AdminModule',
+        'DoctrineModule',
+        'DoctrineORMModule',
+        'Midnight\UserModule',
+        'ZfcRbac',
+        'Midnight\CmsModule',
     ),
     'module_listener_options' => array(
         'module_paths' => array(
@@ -11,9 +20,9 @@ return array(
         'config_glob_paths' => array(
             'config/autoload/{,*.}{global,local}.php',
         ),
-        'config_cache_enabled' => true,
+        'config_cache_enabled' => false,
         'config_cache_key' => 'config_cache',
-        'module_map_cache_enabled' => true,
+        'module_map_cache_enabled' => false,
         'module_map_cache_key' => 'module_classmap',
         'cache_dir' => 'data/cache',
     ),
