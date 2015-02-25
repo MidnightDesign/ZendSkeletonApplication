@@ -2,59 +2,59 @@
 
 namespace Application;
 
-return array(
-    'router' => array(
-        'routes' => array(
-            'home' => array(
+return [
+    'router' => [
+        'routes' => [
+            'home' => [
                 'type' => 'Literal',
-                'options' => array(
+                'options' => [
                     'route' => '/',
-                    'defaults' => array(
+                    'defaults' => [
                         'controller' => __NAMESPACE__ . '\Controller\Index',
                         'action' => 'index',
-                    ),
-                ),
-            ),
-        ),
-    ),
-    'service_manager' => array(
-        'abstract_factories' => array(
+                    ],
+                ],
+            ],
+        ],
+    ],
+    'service_manager' => [
+        'abstract_factories' => [
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',
-        ),
-        'aliases' => array(
+        ],
+        'aliases' => [
             'translator' => 'MvcTranslator',
-        ),
-    ),
-    'translator' => array(
+        ],
+    ],
+    'translator' => [
         'locale' => 'en_US',
-        'translation_file_patterns' => array(
-            array(
+        'translation_file_patterns' => [
+            [
                 'type' => 'gettext',
                 'base_dir' => __DIR__ . '/../language',
                 'pattern' => '%s.mo',
-            ),
-        ),
-    ),
-    'controllers' => array(
-        'invokables' => array(
+            ],
+        ],
+    ],
+    'controllers' => [
+        'invokables' => [
             __NAMESPACE__ . '\Controller\Index' => __NAMESPACE__ . '\Controller\IndexController'
-        ),
-    ),
-    'view_manager' => array(
+        ],
+    ],
+    'view_manager' => [
         'display_not_found_reason' => true,
         'display_exceptions' => true,
         'doctype' => 'HTML5',
         'not_found_template' => 'error/404',
         'exception_template' => 'error/index',
-        'template_map' => array(
+        'template_map' => [
             'layout/layout' => __DIR__ . '/../view/layout/layout.phtml',
             'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
             'error/404' => __DIR__ . '/../view/error/404.phtml',
             'error/index' => __DIR__ . '/../view/error/index.phtml',
-        ),
-        'template_path_stack' => array(
+        ],
+        'template_path_stack' => [
             __DIR__ . '/../view',
-        ),
-    ),
-);
+        ],
+    ],
+];
